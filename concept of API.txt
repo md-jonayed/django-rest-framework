@@ -1,0 +1,36 @@
+suppose we have a wbsite and a database is storing our data.
+if we want to build an app based on this website we will need to create another database. if we convert the database of the webiste into an API then we can use this API on different platform like android,mac,ios,windows applications. API is benifical in terms of cost cutting.
+
+# REST API -> Representational state transfer.
+API is an architecture in which helps database's data to transform in a json format which can be accessed by any application.
+JSON -> javascript object notation.
+
+* setting up our project for mac system:
+1. create a virtual environment 
+- open terminal go to disired directory
+- run this command: python3 -m venv venv
+2. activate the newly created "venv" virtual environment.
+- run this command: source venv/bin/activate
+3. install django in this virtual environment.
+- run this command: pip install django
+4. upgrade pip
+- python3 -m pip install --upgrade pip
+5.install django rest framework -> pip install djangorestframework
+5. after completing all required package instalation list all the package names into a requirements.txt file run this command-> pip freeze > requirements.txt 
+we can install all the required packages using this file.
+run this command: pip install -r requirements.txt
+5. create a project: django-admin startproject projectname 
+6. go to the newly created project folder -> cd projectname
+7. migrate the project -> python3 manage.py migrate
+8. create an app inside this project-> python3 manage.py startapp appName
+9. create a super user -> python3 manage.py createsuperuser
+- give name,email and password then select y 
+10. run the server -> python3 manage.py runserver
+- follow the link then our project will start
+11. login using super user -> click on the link and include admin -> http://127.0.0.1:8000/admin
+then django admin panel will open 
+12. go to django restframework website -> https://www.django-rest-framework.org fo better understanding and for working with rest api.
+13. we need to understand the serializer part 
+- mysql database -> django models ->serializer -> views -> django urls -> api endpoints
+client send request for data so the request goes to the mysql database then the data is feteched into the model. Then the models will be stored in serializer. the serializer will transform the query data into json format. 
+
